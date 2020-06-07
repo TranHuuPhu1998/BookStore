@@ -5,7 +5,7 @@
         {
             @if (category.Parentid != null) continue;
             <li class="cat-item @(category.ChildCategories != null && category.ChildCategories.Count > 0?"has-children":"")">
-                <a href="@Url.Action("Detail", "Category", new {id = category.Id})">@category.Title</a>
+                <a href="@Url.Action("Detail", "Category", new {id = category.Id})">@category.Title </a>
                 @if (category.ChildCategories != null && category.ChildCategories.Count > 0)
                 {
             <ul class="sub-menu">

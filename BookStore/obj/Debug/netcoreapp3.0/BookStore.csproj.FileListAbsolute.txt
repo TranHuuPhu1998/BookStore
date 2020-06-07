@@ -79,7 +79,6 @@ E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\BookStore.csproj.Cop
 E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\staticwebassets\BookStore.StaticWebAssets.Manifest.cache
 E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\staticwebassets\BookStore.StaticWebAssets.xml
 E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\BookStore.genruntimeconfig.cache
-E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\Razor\Views\Book\Category.cshtml.g.cs
 E:\DOT_NET_CORE\DotNetMVC\BookStore\bin\Debug\netcoreapp3.0\out\web.config
 E:\DOT_NET_CORE\DotNetMVC\BookStore\bin\Debug\netcoreapp3.0\out\appsettings.Development.json
 E:\DOT_NET_CORE\DotNetMVC\BookStore\bin\Debug\netcoreapp3.0\out\appsettings.json
@@ -99,3 +98,5 @@ E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\Razor\Views\Cart\Ind
 E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Components\MainCategoryComponent\Default.cshtml.g.cs
 E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Components\MenuComponent\Default.cshtml.g.cs
 E:\DOT_NET_CORE\DotNetMVC\BookStore\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\Razor\Views\Category\Detail.cshtml.g.cs
+E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Components\CartComponent\Default.cshtml.g.cs

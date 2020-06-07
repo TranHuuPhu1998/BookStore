@@ -52,7 +52,8 @@ namespace BookStore
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseSession();  
+          
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

@@ -1,30 +1,38 @@
+  
 using System;
 using System.Collections.Generic;
-
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using BookStore.Data;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Encodings.Web;
+using Microsoft.Extensions.Logging;
 using BookStore.Models;
+
 
 namespace BookStore.Controllers
 {
     public class BookController : Controller
-    {
-        public IActionResult Detail()
+    {     private readonly ILogger<HomeController> _logger;
+        private readonly BookService _bookService;
+
+        public BookController(ILogger<HomeController> logger, BookService bookService)
         {
-            Book book = new Book
-            {       
-                Id=1,
-                Author ="Apple",
-                Description="learn dotnet core",
-                Title="book",
-                Price=111,
-                DiscountedPrice=1010
+            _logger = logger;
+            _bookService = bookService;
+        }
 
-            };
-
-            return View(book);
+        [HttpGet("{id}")]
+        public IActionResult Detail(int id)
+        {
+            var books = _bookService.ListAllBooks();
+            // foreach (var item in books)
+            // {
+            //     if(item.Id == id){
+            //         ViewData["CategoryItem"] = item;
+            //     }
+            // }
+            return View(books);
         }
     }
 }

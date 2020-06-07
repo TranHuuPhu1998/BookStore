@@ -1,3 +1,4 @@
+using System.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,13 +19,19 @@ namespace BookStore.Controllers
         {
             _bookService = bookService;
         }
-
+        [HttpGet("Detail/{id}")]
         // GET: /<controller>/
         public IActionResult Detail(int id)
         {
 
-            List<Book> books = _bookService.GetAllBookOfCategory(id);
+            ViewData["GetAllBookOfCategory"] = _bookService.GetAllBookOfCategory(id);
+            ViewData["list1"] = _bookService.GetCountCategory();
+            var books = _bookService.ListAllBooks();
+            
             return View(books);
         }
+
+    
+        
     }
 }

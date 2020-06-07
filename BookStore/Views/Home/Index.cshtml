@@ -846,7 +846,7 @@
                         {"breakpoint":480, "settings": {"slidesToShow": 1} },
                         {"breakpoint":320, "settings": {"slidesToShow": 1} }
                     ]'>
-                            @foreach (Book book in (ViewData["list1"] as List<Book>))
+                                        @foreach (Book book in (ViewData["list1"] as List<Book>))
                                                 {
                                                     <div class="single-slide">
                                                        @await Html.PartialAsync("~/Views/Book/BookCard.cshtml", book)

@@ -1,6 +1,5 @@
 @model Dictionary<Book, int>
 
-
 <main class="cart-page-main-block inner-page-sec-padding-bottom">
     <div class="cart_area cart-area-padding  ">
         <div class="container">
@@ -30,7 +29,7 @@
                                         <!-- Product Row -->
                                         <tr>
                                             <td class="pro-remove">
-                                                <a href="@Url.Action("RemoveProduct", new {kv.Key.Id})"><i class="far fa-trash-alt"></i></a>
+                                                <a href="@Url.Action("RemoveProduct", new {@kv.Key.Id})"><i class="far fa-trash-alt"></i></a>
                                             </td>
                                             <td class="pro-thumbnail">
                                                 <a href="#">
@@ -48,8 +47,9 @@
                                                 </div>
                                             </td>
                                             <td class="pro-subtotal"><span>$@(kv.Value * kv.Key.Price)</span></td>
-                                        </tr>
+                                        </tr> 
                                     }
+                                     
                                 
                                     <tr>
                                         <td colspan="6" class="actions">
@@ -117,7 +117,7 @@
                                 </div>
                                 <div class="product-card--body">
                                     <div class="card-image">
-                                        <img src="image/products/product-10.jpg" alt="">
+                                        <img src="~/image/products/product-10.jpg" alt="">
                                         <div class="hover-contents">
                                             <a href="product-details.html" class="hover-image">
                                                 <img src="image/products/product-1.jpg" alt="">

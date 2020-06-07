@@ -26,11 +26,21 @@ namespace BookStore.Controllers
         {
             Dictionary<int, int> bookIds = CardHelper.GetAllProducts(HttpContext);
             Dictionary<Book, int> books = _bookService.FindAll(bookIds);
+
             string referer = Request.Headers["Referer"].ToString();
             ViewData["returnurl"] = referer;
             return View(books);
         }
 
+        public IActionResult CartTop()
+        {
+            Dictionary<int, int> bookIds = CardHelper.GetAllProducts(HttpContext);
+            Dictionary<Book, int> books = _bookService.FindAll(bookIds);
+             ViewData["bookscart"] = books;
+            return View(books);
+        }
+
+        [HttpGet("Card/AddProduct/{id}")]
         public IActionResult AddProduct(int id)
         {
             Book book = _bookService.GetById(id);
@@ -54,6 +64,7 @@ namespace BookStore.Controllers
 
     public static class CardHelper
     {
+
         public static void AddProduct(HttpContext context, Book book)
         {
             string bookstr = context.Session.GetString("cart");

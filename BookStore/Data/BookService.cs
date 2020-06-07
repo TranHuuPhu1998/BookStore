@@ -46,5 +46,13 @@ namespace BookStore.Data
                 select new KeyValuePair<Book, int>(appDataContext.Book.Find(kv.Key), kv.Value);
             return query.ToDictionary(v => v.Key, v => v.Value);
         }
+
+        public Dictionary<Category, int> GetCountCategory()
+        {
+            var query = from c in appDataContext.Category
+                select new KeyValuePair<Category ,int>(c , (from d in appDataContext.Categorybook where c.Id == d.CategoryId select d).Count() );
+ 
+            return query.ToDictionary(v => v.Key, v => v.Value);
+        }
     }
 }

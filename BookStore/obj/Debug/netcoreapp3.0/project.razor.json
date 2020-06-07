@@ -12396,6 +12396,31 @@
       },
       {
         "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__CartComponentViewComponentTagHelper",
+        "AssemblyName": "BookStore",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:cart-component",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__CartComponentViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "CartComponent"
+        }
+      },
+      {
+        "Kind": "MVC.ViewComponent",
         "Name": "__Generated__MainCategoryComponentViewComponentTagHelper",
         "AssemblyName": "BookStore",
         "Documentation": null,
@@ -14439,6 +14464,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\DOT_NET_CORE\\DotNetMVC\\BookStore\\Views\\Category\\Detail.cshtml",
+      "TargetPath": "Views\\Category\\Detail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\DOT_NET_CORE\\DotNetMVC\\BookStore\\Views\\Book\\BookCardMini.cshtml",
       "TargetPath": "Views\\Book\\BookCardMini.cshtml",
       "FileKind": "mvc"
@@ -14464,8 +14494,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "e:\\DOT_NET_CORE\\DotNetMVC\\BookStore\\Views\\Book\\Category.cshtml",
-      "TargetPath": "Views\\Book\\Category.cshtml",
+      "FilePath": "e:\\DOT_NET_CORE\\DotNetMVC\\BookStore\\Views\\Shared\\Components\\CartComponent\\Default.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\CartComponent\\Default.cshtml",
       "FileKind": "mvc"
     },
     {

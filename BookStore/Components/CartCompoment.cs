@@ -25,7 +25,8 @@ namespace BookStore.Components
         public async Task<IViewComponentResult> InvokeAsync() 
         {
             Dictionary<int, int> bookIds = CardHelper.GetAllProducts(HttpContext);
-            Dictionary<Book, int> books = _bookService.FindAll(bookIds);
+            Dictionary<Book, int> books = _bookService.FindAll(bookIds); 
+      
     
             string referer = Request.Headers["Referer"].ToString();
             ViewData["returnurl"] = referer;

@@ -17,10 +17,20 @@ namespace BookStore.Components
             _bookService = bookService;
         }
 
-        public async Task<IViewComponentResult> InvokeAsync()
+       public async Task<IViewComponentResult> InvokeAsync()
         {
             List<Category> categories = _bookService.GetAllCategories();
             return View(categories);
         }
+
+        // public async Task<IViewComponentResult> InvokeAsync()
+        // {
+        //     List<Category> categories = _bookService.GetAllCategories();
+        //     return View(categories);
+        // }
+
+        // GET: /<controller>/
+    
+       
     }
 }

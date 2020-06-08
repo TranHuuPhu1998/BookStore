@@ -21,26 +21,30 @@ namespace BookStore.Controllers
         {
             _bookService = bookService;
         }
-        [HttpGet("Detail/{id}")]
+        [HttpGet("Category/Detail/{id}")]
         // GET: /<controller>/
-        public IActionResult Detail(int id)
+        public IActionResult Detail(int id , int page=1,int pageSize=1)
         {
-
-            ViewData["GetAllBookOfCategory"] = _bookService.GetAllBookOfCategory(id);
+            int totalRecord = 0;
+            ViewData["GetAllBookOfCategory"] = _bookService.GetAllBookOfCategory(id,ref totalRecord,page,pageSize);
             ViewData["list1"] = _bookService.GetCountCategory();
             var books = _bookService.ListAllBooks();
-            
+            ViewBag.Total = totalRecord;
+            ViewBag.Page = page;
+
+            int maxPage = 5;
+            int totalPage = 0;
+
+            totalPage = (int)Math.Ceiling((double)(totalRecord / pageSize));
+            ViewBag.IdCategory = id;
+            ViewBag.TotalPage = totalPage;
+            ViewBag.MaxPage = maxPage;
+            ViewBag.First = 1;
+            ViewBag.Last = totalPage;
+            ViewBag.Next = page + 1;
+            ViewBag.Prev = page -1;
             return View(books);
         }
-
-        // [HttpGet("Detail/{id}")]
-        public async Task<IActionResult> getPage(int id,int? pageNumber){
-            var books = _bookService.GetAllBookOfCategory(id);
-            int pageSize = 3;
-            return View(await PaginatedList<Book>.CreateAsync(books.ToList().AsQueryable(), pageNumber ?? 1, pageSize));
-        }
-
-    
         
     }
 }

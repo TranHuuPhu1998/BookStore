@@ -9,6 +9,8 @@ namespace BookStore.Data
     
     public class BookService
     {
+        public static List<Book> BookList { get; set; }
+
         private AppDataContext appDataContext;
 
         public BookService(AppDataContext appDataContext)

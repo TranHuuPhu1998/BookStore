@@ -100,3 +100,4 @@ E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\C
 E:\DOT_NET_CORE\DotNetMVC\BookStore\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
 E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\Razor\Views\Category\Detail.cshtml.g.cs
 E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Components\CartComponent\Default.cshtml.g.cs
+E:\DOT_NET_CORE\DotNetMVC\BookStore\obj\Debug\netcoreapp3.0\Razor\Views\Category\getPage.cshtml.g.cs

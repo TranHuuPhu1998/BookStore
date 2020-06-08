@@ -32,13 +32,7 @@ namespace BookStore.Controllers
             return View(books);
         }
 
-        public IActionResult CartTop()
-        {
-            Dictionary<int, int> bookIds = CardHelper.GetAllProducts(HttpContext);
-            Dictionary<Book, int> books = _bookService.FindAll(bookIds);
-             ViewData["bookscart"] = books;
-            return View(books);
-        }
+      
 
         [HttpGet("Card/AddProduct/{id}")]
         public IActionResult AddProduct(int id)
@@ -83,6 +77,7 @@ namespace BookStore.Controllers
 
             bookstr = JsonConvert.SerializeObject(books);
             context.Session.SetString("cart", bookstr);
+          
         }
 
         public static Dictionary<int, int> GetAllProducts(HttpContext context)

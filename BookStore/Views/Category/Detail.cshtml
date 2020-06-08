@@ -132,10 +132,10 @@
                     </div>
                 </div>
                 <div class="shop-product-wrap grid with-pagination row space-db--30 shop-border">
-                    <div class="col-lg-4 col-sm-6">
+                 
                         @foreach(Book kv in ViewData["GetAllBookOfCategory"] as List<Book>)
                             {
-
+   <div class="col-lg-4 col-sm-6">
                             <div class="product-card card-style-list">
                                 <div class="product-grid-content">
                                     <div class="product-header">
@@ -147,10 +147,10 @@
                                     </div>
                                     <div class="product-card--body">
                                         <div class="card-image">
-                                            <img src="image/products/product-2.jpg" alt="">
+                                            <img src="~/image/products/product-1.jpg" alt="">
                                             <div class="hover-contents">
                                                 <a href="product-details.html" class="hover-image">
-                                                    <img src="image/products/product-1.jpg" alt="">
+                                                    <img src="~/image/products/product-1.jpg" alt="">
                                                 </a>
                                                 <div class="hover-btns">
                                                
@@ -180,7 +180,7 @@
                                 </div>
                                 <div class="product-list-content">
                                     <div class="card-image">
-                                        <img src="image/products/product-3.jpg" alt="">
+                                        <img src="~/image/products/product-3.jpg" alt="">
                                     </div>
                                     <div class="product-card--body">
                                         <div class="product-header">
@@ -210,18 +210,18 @@
                                             <span class="fas fa-star "></span>
                                         </div>
                                         <div class="btn-block">
-                                            <a href="" class="btn btn-outlined">Add To Cart</a>
+                                            <a href="@Url.Action("AddProduct", "Cart" , new {id=@kv.Id})" class="btn btn-outlined">Add To Cart</a>
                                             <a href="" class="card-link"><i class="fas fa-heart"></i> Add To
                                                 Wishlist</a>
-                                            <a href="" class="card-link"><i class="fas fa-random"></i> Add To
+                                            <a href="@Url.Action("AddProduct", "Cart" , new {id=@kv.Id})" class="card-link"><i class="fas fa-random"></i> Add To
                                                 Cart</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
+ </div>
                             }
-                    </div>
+                   
                 </div>
                 <div class="row pt--30">
                     <div class="col-md-12">
@@ -267,19 +267,19 @@
       "asNavFor": ".product-slider-nav"
       }'>
                                             <div class="single-slide">
-                                                <img src="image/products/product-details-1.jpg" alt="">
+                                                <img src="~/image/products/product-details-1.jpg" alt="">
                                             </div>
                                             <div class="single-slide">
-                                                <img src="image/products/product-details-2.jpg" alt="">
+                                                <img src="~/image/products/product-details-2.jpg" alt="">
                                             </div>
                                             <div class="single-slide">
-                                                <img src="image/products/product-details-3.jpg" alt="">
+                                                <img src="~/image/products/product-details-3.jpg" alt="">
                                             </div>
                                             <div class="single-slide">
-                                                <img src="image/products/product-details-4.jpg" alt="">
+                                                <img src="~/image/products/product-details-4.jpg" alt="">
                                             </div>
                                             <div class="single-slide">
-                                                <img src="image/products/product-details-5.jpg" alt="">
+                                                <img src="~/image/products/product-details-5.jpg" alt="">
                                             </div>
                                         </div>
                                         <!-- Product Details Slider Nav -->
@@ -296,19 +296,19 @@
       "focusOnSelect": true
       }'>
                                             <div class="single-slide">
-                                                <img src="image/products/product-details-1.jpg" alt="">
+                                                <img src="~/image/products/product-details-1.jpg" alt="">
                                             </div>
                                             <div class="single-slide">
-                                                <img src="image/products/product-details-2.jpg" alt="">
+                                                <img src="~/image/products/product-details-2.jpg" alt="">
                                             </div>
                                             <div class="single-slide">
-                                                <img src="image/products/product-details-3.jpg" alt="">
+                                                <img src="~/image/products/product-details-3.jpg" alt="">
                                             </div>
                                             <div class="single-slide">
-                                                <img src="image/products/product-details-4.jpg" alt="">
+                                                <img src="~/image/products/product-details-4.jpg" alt="">
                                             </div>
                                             <div class="single-slide">
-                                                <img src="image/products/product-details-5.jpg" alt="">
+                                                <img src="~/image/products/product-details-5.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -452,7 +452,7 @@
                     <!-- Promotion Block -->
                     <div class="single-block">
                         <a href="" class="promo-image sidebar">
-                            <img src="image/others/home-side-promo.jpg" alt="">
+                            <img src="~/image/others/home-side-promo.jpg" alt="">
                         </a>
                     </div>
                 </div>

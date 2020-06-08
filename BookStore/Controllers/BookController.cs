@@ -26,12 +26,7 @@ namespace BookStore.Controllers
         public IActionResult Detail(int id)
         {
             var books = _bookService.ListAllBooks();
-            // foreach (var item in books)
-            // {
-            //     if(item.Id == id){
-            //         ViewData["CategoryItem"] = item;
-            //     }
-            // }
+           
             return View(books);
         }
     }

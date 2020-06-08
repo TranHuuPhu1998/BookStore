@@ -12470,6 +12470,31 @@
         }
       },
       {
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__PaginatedListComponentViewComponentTagHelper",
+        "AssemblyName": "BookStore",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:paginated-list-component",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__PaginatedListComponentViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "PaginatedListComponent"
+        }
+      },
+      {
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -14481,6 +14506,11 @@
     {
       "FilePath": "e:\\DOT_NET_CORE\\DotNetMVC\\BookStore\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\DOT_NET_CORE\\DotNetMVC\\BookStore\\Views\\Category\\getPage.cshtml",
+      "TargetPath": "Views\\Category\\getPage.cshtml",
       "FileKind": "mvc"
     },
     {

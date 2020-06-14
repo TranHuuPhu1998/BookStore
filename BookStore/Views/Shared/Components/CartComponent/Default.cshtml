@@ -1,5 +1,5 @@
 @model Dictionary<Book, int>
-
+@* @ViewBag.total=0; *@
     <div class="cart-block">
         <div class="cart-total">
             <span class="text-number">
@@ -9,7 +9,11 @@
                 Shopping Cart
             </span>
             <span class="price">
-                £0.00
+                @foreach(
+                    KeyValuePair<Book, int> kv in Model as Dictionary<Book ,int>){
+                    @* <span>  ViewBag.total = ViewBag.total + @(kv.Value * kv.Key.Price) $</span> *@
+                    <span> @(kv.Value * kv.Key.Price) $</span>
+                }
                 <i class="fas fa-chevron-down"></i>
             </span>
         </div>

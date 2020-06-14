@@ -155,7 +155,7 @@
                                                     </a>
                                                     <div class="hover-btns">
 
-                                                        <a href="@Url.Action(" AddProduct", "Cart" , new {id=@kv.Id})"
+                                                        <a href="@Url.Action("AddProduct", "Cart" , new {id=@kv.Id})"
                                                             class="single-btn">
                                                             <i class="fas fa-shopping-basket"></i>
                                                         </a>
@@ -213,11 +213,11 @@
                                                 <span class="fas fa-star "></span>
                                             </div>
                                             <div class="btn-block">
-                                                <a href="@Url.Action(" AddProduct", "Cart" , new {id=@kv.Id})"
+                                                <a href="@Url.Action("AddProduct", "Cart" , new {id=@kv.Id})"
                                                     class="btn btn-outlined">Add To Cart</a>
                                                 <a href="" class="card-link"><i class="fas fa-heart"></i> Add To
                                                     Wishlist</a>
-                                                <a href="@Url.Action(" AddProduct", "Cart" , new {id=@kv.Id})"
+                                                <a href="@Url.Action("AddProduct", "Cart" , new {id=@kv.Id})"
                                                     class="card-link"><i class="fas fa-random"></i> Add To
                                                     Cart</a>
                                             </div>
@@ -238,11 +238,11 @@
                                 int totalPage = (int)ViewBag.TotalPage;
                                 int currentPage = ((int)ViewBag.Page);
 
-                                // Create numeric links
+                                //Create numeric links
                                 var startPageIndex = Math.Max(1, currentPage - pageDisplay / 2);
                                 var endPageIndex = Math.Min(totalPage, currentPage + pageDisplay / 2);
 
-                                var link = "/Category/Detail/" + ViewBag.IdCategory;
+                                var link = "/Category/Index/" + ViewBag.IdCategory;
       
                                     <ul class="pagination-btns flex-center">
                                         @if (currentPage > ViewBag.First)
@@ -280,7 +280,21 @@
 
                                 }
                                 @if (ViewBag.TotalPage == 1){
-                                <span>Có 1 bản ghi nào</span>
+                                    <ul class="pagination-btns flex-center">
+                                        <li><a href=""  class="single-btn prev-btn ">|<i
+                                            class="zmdi zmdi-chevron-left"></i></a></li>
+                                        <li>
+                                            <a href="" title="Trang trước" class="single-btn prev-btn "><i
+                                                class="zmdi zmdi-chevron-left"></i></a>
+                                        </li>
+                                        <li><a href="#"  class="single-btn">1</a></li>
+                                        <li><a href="#"
+                                                    class="single-btn next-btn"><i class="zmdi zmdi-chevron-right"
+                                                        title="Trang sau"></i></a></li>
+                                                <li><a href="#" class="single-btn next-btn"
+                                                        title="Trang cuối"><i class="zmdi zmdi-chevron-right"></i>|</a>
+                                                </li>
+                                    </ul>
                                 }
                                 @if (ViewBag.TotalPage == 0)
                                 {
@@ -441,14 +455,15 @@
                             <ul class="sidebar-menu--shop">
                                 @foreach (KeyValuePair<Category ,int> kv in ViewData["List1"] as Dictionary<Category,
                                         int>){
-                                        <li><a href="">@kv.Key.Title (@kv.Value)</a> </li>
+                                        <li><a href=""@Url.Action("Index", "Category" , new
+                                                    {id=kv.Key.Id})"">@kv.Key.Title (@kv.Value)</a> </li>
                                         @if (@kv.Key.ChildCategories != null && @kv.Key.ChildCategories.Count > 0)
                                         {
                                         <ul class="inner-cat-items">
                                             @foreach (Category sub in @kv.Key.ChildCategories)
                                             {
 
-                                            <li><a href="@Url.Action(" Detail", "Category" , new
+                                            <li><a href="@Url.Action("Index", "Category" , new
                                                     {id=sub.Id})">@sub.Title
                                                 </a></li>
                                             }

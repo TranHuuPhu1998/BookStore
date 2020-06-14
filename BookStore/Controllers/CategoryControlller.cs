@@ -21,14 +21,18 @@ namespace BookStore.Controllers
         {
             _bookService = bookService;
         }
-        [HttpGet("Category/Detail/{id}")]
+        // [HttpGet("Category/Detail/{id}")]
         // GET: /<controller>/
-        public IActionResult Detail(int id , int page=1,int pageSize=1)
+        public IActionResult Index(int id , int page=1, int pageSize=1)
         {
+           // int page = Convert.ToInt32(HttpContext.Request.Query["page"]);
+            // int page = ConverIn HttpContext.Request.Query["page"];
             int totalRecord = 0;
             ViewData["GetAllBookOfCategory"] = _bookService.GetAllBookOfCategory(id,ref totalRecord,page,pageSize);
+            
             ViewData["list1"] = _bookService.GetCountCategory();
             var books = _bookService.ListAllBooks();
+            // var books = _bookService.GetAllBookOfCategory(id,ref totalRecord,page,pageSize);
             ViewBag.Total = totalRecord;
             ViewBag.Page = page;
 
@@ -42,7 +46,7 @@ namespace BookStore.Controllers
             ViewBag.First = 1;
             ViewBag.Last = totalPage;
             ViewBag.Next = page + 1;
-            ViewBag.Prev = page -1;
+            ViewBag.Prev = page - 1;
             return View(books);
         }
         

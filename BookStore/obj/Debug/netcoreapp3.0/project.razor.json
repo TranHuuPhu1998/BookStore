@@ -14464,11 +14464,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "e:\\DOT_NET_CORE\\DotNetMVC\\BookStore\\Views\\Category\\Detail.cshtml",
-      "TargetPath": "Views\\Category\\Detail.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "e:\\DOT_NET_CORE\\DotNetMVC\\BookStore\\Views\\Book\\BookCardMini.cshtml",
       "TargetPath": "Views\\Book\\BookCardMini.cshtml",
       "FileKind": "mvc"
@@ -14481,11 +14476,6 @@
     {
       "FilePath": "e:\\DOT_NET_CORE\\DotNetMVC\\BookStore\\Views\\Shared\\Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\DOT_NET_CORE\\DotNetMVC\\BookStore\\Views\\Category\\getPage.cshtml",
-      "TargetPath": "Views\\Category\\getPage.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14516,6 +14506,11 @@
     {
       "FilePath": "e:\\DOT_NET_CORE\\DotNetMVC\\BookStore\\Views\\Cart\\Index.cshtml",
       "TargetPath": "Views\\Cart\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\DOT_NET_CORE\\DotNetMVC\\BookStore\\Views\\Category\\Index.cshtml",
+      "TargetPath": "Views\\Category\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],

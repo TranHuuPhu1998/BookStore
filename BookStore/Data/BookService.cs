@@ -27,15 +27,17 @@ namespace BookStore.Data
         {
             return appDataContext.Category.ToList();
         }
+        // phân trang: chạy xem
 
-        public List<Book> GetAllBookOfCategory(int categoryId,ref int totalRecord ,int pageIndex=1, int pageSize=1)
+        public List<Book> GetAllBookOfCategory(int categoryId,ref int totalRecord ,int page=1, int pageSize=1)
         {
             var query = from b in appDataContext.Book
                         join cb in appDataContext.Categorybook on b.Id equals cb.BookId
                         where cb.CategoryId == categoryId
                         select b;
             totalRecord = query.ToList().Count();
-            return query.Skip((pageSize -1) * pageSize).Take(pageSize).ToList();
+            var rs = query.Skip((page -1) * pageSize).Take(pageSize);
+            return rs.ToList();
         }
 
         public Book GetById(int id)
